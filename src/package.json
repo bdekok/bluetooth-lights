@@ -2,7 +2,7 @@
   "name": "bluetooth-light",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bdekok.github.io/bluetooth-lights",
+  "homepage": "https://bdekok.github.io/bluetooth-lights/demo",
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
