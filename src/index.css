@@ -1,0 +1,110 @@
+@keyframes gradientAnimate2 {
+  0% { background-color: var(--bg-color-1) }
+  50% { background-color: var(--bg-color-2) }
+  100% { background-color: var(--bg-color-1) }
+}
+@keyframes gradientAnimate3 {
+  0% { background-color: var(--bg-color-1) }
+  33% { background-color: var(--bg-color-2) }
+  66% { background-color: var(--bg-color-3) }
+  100% { background-color: var(--bg-color-1) }
+}
+@keyframes gradientAnimate4 {
+  0% { background-color: var(--bg-color-1) }
+  25% { background-color: var(--bg-color-2) }
+  50% { background-color: var(--bg-color-3) }
+  75% { background-color: var(--bg-color-4) }
+  100% { background-color: var(--bg-color-1) }
+}
+@keyframes gradientAnimate5 {
+  0% { background-color: var(--bg-color-1) }
+  20% { background-color: var(--bg-color-2) }
+  40% { background-color: var(--bg-color-3) }
+  60% { background-color: var(--bg-color-4) }
+  80% { background-color: var(--bg-color-5) }
+  100% { background-color: var(--bg-color-1) }
+}
+
+
+html,
+body {
+  margin: 0;
+  font-size:100%;
+  font-family:helvetica,sans-serif;
+}
+.bulb {
+  width:100vw;
+  height:100vh;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.bulb:nth-last-child(n+2),
+.bulb:nth-last-child(n+2) ~ .bulb {
+  width:50vw;
+}
+
+.bulb > * {
+  flex:none;
+  margin:10px 0;
+}
+
+.background-color {
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:-1;
+  background:  var(--bg-color-1);
+}
+.background-color--length-2 {
+  animation: 5s infinite gradientAnimate2;
+}
+.background-color--length-3 {
+  animation: 10s infinite gradientAnimate3;
+}
+.background-color--length-4 {
+  animation: 15s infinite gradientAnimate4;
+}
+.background-color--length-5  {
+  animation: 20s infinite gradientAnimate5;
+}
+
+button {
+  font-size: 1rem;
+  padding:5px 15px;
+  color:#fff;
+  border: none;
+  background:rgba(0,0,0,0.7);
+  border-bottom: 4px solid #000;
+  margin: 0 2px;
+}
+
+button:hover {
+  background:rgba(0,0,0,0.6);
+  color:#fff;
+  cursor:pointer;
+}
+
+.bulbControls {
+  position: fixed;
+  bottom:0;
+  right:0;
+  z-index:1;
+}
+.bulbControls button {
+  margin:0;
+  background: rgba(255,255,255,0.5);
+  color:#000;
+  border:none;
+  font-size:0.7rem;
+}
+
+.container {
+  display: flex;
+}
+
